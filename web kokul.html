@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumber Mata Air Krawak Tuban - Surga Tersembunyi di Jantung Hutan Jati</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat (Heading), Poppins (Subheading), Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'toska': '#0F766E',      /* Hijau Toska - Utama / CTA */
+                        'toska-hover': '#0d655e',
+                        'cokelat': '#78350F',    /* Cokelat Kayu - Akses Garis & Bingkai */
+                        'sage': '#E6F4EA',       /* Hijau Sage - Latar Belakang Alternatif */
+                        'sage-dark': '#d2ebd9',
+                        'putih': '#FFFFFF',      /* Putih - Latar Belakang Utama */
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'subheading': ['Poppins', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #1F2937;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h4, h5, h6, .font-subheading {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Magazine Editorial Frame & Border Effects */
+        .magazine-frame {
+            border: 2px solid #78350F;
+            position: relative;
+        }
+        .magazine-frame::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: -6px;
+            bottom: -6px;
+            border: 1px solid rgba(120, 53, 15, 0.35);
+            pointer-events: none;
+            z-index: -1;
+            border-radius: inherit;
+        }
+
+        .editorial-border-b {
+            border-bottom: 2px solid #78350F;
+        }
+        
+        .editorial-badge {
+            border: 1px solid #78350F;
+            color: #78350F;
+            background-color: rgba(230, 244, 234, 0.95);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Glassmorphism details */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E6F4EA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0F766E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #78350F;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-toska selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT & NATURAL AMBIANCE SOUND CONTROL BAR -->
+    <div class="bg-toska text-white py-2 px-4 text-xs sm:text-sm font-subheading">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <span class="inline-flex items-center gap-1.5 bg-white/20 px-2.5 py-0.5 rounded-full font-medium">
+                    <i class="fa-solid fa-location-dot text-amber-300"></i> Singgahan, Tuban, Jawa Timur
+                </span>
+                <span class="hidden md:inline-block border-l border-white/30 pl-3">
+                    <i class="fa-solid fa-sun text-amber-300 mr-1"></i> Suasana Hari Ini: Sejuk & Bening
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="ambianceBtn" onclick="toggleAmbianceSound()" class="inline-flex items-center gap-1.5 hover:text-amber-200 transition-colors cursor-pointer bg-black/20 hover:bg-black/30 px-3 py-1 rounded-full text-xs font-semibold">
+                    <i id="ambianceIcon" class="fa-solid fa-volume-xmark"></i>
+                    <span id="ambianceText">Atmosfer Gemericik Air (OFF)</span>
+                </button>
+                <a href="#lokasi" class="hover:underline font-semibold text-amber-200 flex items-center gap-1">
+                    <i class="fa-solid fa-compass"></i> Peta Lokasi
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-putih/95 backdrop-blur shadow-sm border-b-2 border-cokelat">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-toska rounded-lg flex items-center justify-center text-white text-xl font-heading font-black shadow-md border border-cokelat transform group-hover:rotate-3 transition-transform">
+                        K
+                    </div>
+                    <div>
+                        <span class="block font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-toska leading-none">
+                            KRAWAK <span class="text-cokelat font-light">TUBAN</span>
+                        </span>
+                        <span class="block font-subheading text-[10px] sm:text-xs text-gray-600 tracking-wider uppercase mt-1">
+                            Edisi Majalah Wisata Alam
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7 font-subheading text-sm font-medium text-gray-700">
+                    <a href="#informasi" class="hover:text-toska transition-colors py-1">Informasi</a>
+                    <a href="#daya-tarik" class="hover:text-toska transition-colors py-1">Daya Tarik</a>
+                    <a href="#aktivitas" class="hover:text-toska transition-colors py-1">Aktivitas</a>
+                    <a href="#kuliner" class="hover:text-toska transition-colors py-1">Kuliner & UMKM</a>
+                    <a href="#lokasi" class="hover:text-toska transition-colors py-1">Panduan Rute</a>
+                    <a href="#galeri" class="hover:text-toska transition-colors py-1">Galeri Foto</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://maps.google.com/?cid=4993016948743117244" target="_blank" rel="noopener noreferrer" class="bg-toska hover:bg-toska-hover text-white font-subheading font-semibold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center gap-2 text-sm border border-toska">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                        <span>Petunjuk Rute</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-toska focus:outline-none" aria-label="Menu Utama">
+                    <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-sage border-b-2 border-cokelat px-4 pt-3 pb-6 space-y-3 font-subheading">
+            <a href="#informasi" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-toska font-medium border-b border-gray-200">Informasi Singkat</a>
+            <a href="#daya-tarik" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-toska font-medium border-b border-gray-200">Daya Tarik Utama</a>
+            <a href="#aktivitas" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-toska font-medium border-b border-gray-200">Aktivitas Wisata</a>
+            <a href="#kuliner" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-toska font-medium border-b border-gray-200">Kuliner / UMKM</a>
+            <a href="#lokasi" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-toska font-medium border-b border-gray-200">Panduan Rute & Akses</a>
+            <a href="#galeri" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-toska font-medium">Galeri Foto</a>
+            <div class="pt-2">
+                <a href="https://maps.google.com/?cid=4993016948743117244" target="_blank" rel="noopener" class="w-full bg-toska text-white font-semibold py-2.5 rounded-lg text-center flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-location-arrow"></i> Petunjuk Rute Google Maps
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Foto Utama & Editorial Pitch Bergaya Majalah) -->
+    <section class="relative pt-6 pb-16 lg:py-16 bg-putih overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Editorial Header Meta Bar -->
+            <div class="flex items-center justify-between border-b-2 border-cokelat pb-3 mb-8">
+                <span class="editorial-badge px-3 py-1 text-xs">
+                    DESTINASI WISATA ALAM UNGGULAN
+                </span>
+                <span class="font-subheading text-xs font-semibold text-cokelat tracking-wider hidden sm:inline-block">
+                    DESA GUWOTERUS • KECAMATAN SINGGAHAN / MONTONG
+                </span>
+                <span class="text-xs font-mono font-medium text-gray-500">
+                    KOORDINAT: -7.0315°, 111.7821°
+                </span>
+            </div>
+
+            <!-- Magazine Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Hero Visual Media Frame (Col 1 to 7/8) -->
+                <div class="lg:col-span-7 xl:col-span-8 flex flex-col">
+                    <div class="relative magazine-frame rounded-lg overflow-hidden h-full min-h-[380px] sm:min-h-[480px] bg-gray-200 group">
+                        <img src="krawok.jpg" 
+                             alt="Sumber Mata Air Krawak Tuban" 
+                             onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80'"
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        
+                        <!-- Gradient overlay for title contrast -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+
+                        <!-- Image Badges -->
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
+                            <span class="bg-toska text-white text-xs font-subheading font-bold px-3 py-1.5 rounded shadow-md">
+                                <i class="fa-solid fa-droplet mr-1"></i> Air Bening Bak Kaca
+                            </span>
+                            <span class="bg-white/90 text-cokelat text-xs font-subheading font-bold px-3 py-1.5 rounded shadow-md border border-cokelat">
+                                <i class="fa-solid fa-tree mr-1"></i> Rimbun Hutan Jati
+                            </span>
+                        </div>
+
+                        <!-- Bottom Caption Overlay -->
+                        <div class="absolute bottom-6 left-6 right-6 text-white z-10">
+                            <p class="font-subheading text-xs uppercase tracking-widest text-amber-300 font-semibold mb-1">
+                                Pesona Hutan Perhutani
+                            </p>
+                            <h2 class="font-heading font-bold text-lg sm:text-2xl text-shadow leading-snug">
+                                Hulu Aliran Air Alami Berbatu dengan Kesegaran Murni Pegunungan
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Text & Brand Pitch Sidebar Box (Col 8/9 to 12) -->
+                <div class="lg:col-span-5 xl:col-span-4 flex flex-col justify-between bg-sage p-6 sm:p-8 rounded-lg border-2 border-cokelat shadow-md relative">
+                    <div class="space-y-6">
+                        <!-- Tag & Main Tagline Header -->
+                        <div>
+                            <span class="text-xs font-subheading font-bold uppercase tracking-wider text-toska bg-white px-3 py-1 rounded border border-toska inline-block mb-3 shadow-sm">
+                                Tagline Resmi
+                            </span>
+                            <h1 class="font-heading font-black text-2xl sm:text-3xl xl:text-4xl text-gray-900 leading-tight">
+                                Rasakan Kesegaran Alami di Jantung Hutan Tuban
+                            </h1>
+                        </div>
+
+                        <!-- Cokelat Kayu Divider -->
+                        <div class="w-20 h-1 bg-cokelat rounded"></div>
+
+                        <!-- Editorial Brand Pitch Quote -->
+                        <div class="bg-white p-4 sm:p-5 rounded-lg border-l-4 border-toska shadow-sm relative">
+                            <i class="fa-solid fa-quote-left text-toska/20 text-3xl absolute top-2 left-2"></i>
+                            <p class="font-subheading font-semibold text-gray-800 text-sm sm:text-base italic leading-relaxed relative z-10 pl-2">
+                                "Rasakan sensasi berendam di hulu mata air terjernih di Tuban, tersembunyi rindang di tengah hutan jati."
+                            </p>
+                        </div>
+
+                        <p class="text-gray-700 text-sm leading-relaxed font-body">
+                            Sumber Mata Air Krawak menyuguhkan kejernihan air alami bak kaca yang mengalir melewati formasi bebatuan eksotis di bawah keteduhan rimbun pohon jati Perhutani. Tempat relaksasi paling pas untuk melepaskan kepenatan harian.
+                        </p>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="pt-6 border-t border-gray-300/80 mt-6 space-y-3">
+                        <a href="https://maps.google.com/?cid=4993016948743117244" target="_blank" rel="noopener" class="w-full bg-toska hover:bg-toska-hover text-white font-subheading font-bold py-3.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3 text-center">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Petunjuk Rute Google Maps</span>
+                        </a>
+                        <a href="#informasi" class="w-full bg-white hover:bg-gray-50 text-cokelat border-2 border-cokelat font-subheading font-semibold py-2.5 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 text-center text-sm">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Panduan & Informasi Lengkap</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMASI SINGKAT DESTINASI -->
+    <section id="informasi" class="py-12 bg-sage border-y-2 border-cokelat">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 editorial-border-b">
+                <div>
+                    <span class="editorial-badge px-3 py-1 text-xs">RINGKASAN DESTINASI</span>
+                    <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-gray-900 mt-2">
+                        Informasi Singkat Wisata Krawak
+                    </h2>
+                </div>
+                <p class="font-subheading text-xs sm:text-sm text-gray-600 mt-2 md:mt-0">
+                    Poin-poin penting sebelum merencanakan kunjungan Anda
+                </p>
+            </div>
+
+            <!-- Grid Summary Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+               <!-- Card 1: Jam Operasional -->
+<div class="bg-putih p-6 rounded-lg border-2 border-cokelat shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+    <span class="text-xs font-subheading font-semibold text-gray-500 uppercase tracking-wider">Jam Operasional</span>
+    <h3 class="font-heading font-bold text-xl text-gray-900 mt-1">07.00 - 17.30 WIB</h3>
+    <p class="text-xs text-gray-600 mt-2 font-body">Buka setiap hari. Waktu berendam terbaik pukul 08.00 - 11.00 WIB saat sinar pagi menerobos celah daun jati.</p>
+</div>
+
+<!-- Card 2: Tiket Masuk -->
+<div class="bg-putih p-6 rounded-lg border-2 border-cokelat shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+    <span class="text-xs font-subheading font-semibold text-gray-500 uppercase tracking-wider">Harga Tiket Masuk</span>
+    <h3 class="font-heading font-bold text-xl text-toska mt-1">Rp 5.000 <span class="text-xs font-normal text-gray-600">/ Orang</span></h3>
+    <p class="text-xs text-gray-600 mt-2 font-body">Parkir motor: Rp 2.000 | Mobil: Rp 5.000. Destinasi wisata keluarga yang sangat ekonomis.</p>
+</div>
+
+<!-- Card 3: Lokasi Administratif -->
+<div class="bg-putih p-6 rounded-lg border-2 border-cokelat shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+    <span class="text-xs font-subheading font-semibold text-gray-500 uppercase tracking-wider">Lokasi Wilayah</span>
+    <h3 class="font-heading font-bold text-base text-gray-900 mt-1">Desa Guwoterus</h3>
+    <p class="text-xs text-gray-600 mt-2 font-body">Kecamatan Singgahan / Montong, Kabupaten Tuban (± 30 km dari pusat kota Tuban).</p>
+</div>
+                <!-- Card 4: Suhu & Karakter Air -->
+                <div class="bg-putih p-6 rounded-lg border-2 border-cokelat shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+    <span class="text-xs font-subheading font-semibold text-gray-500 uppercase tracking-wider">Karakter Air & Suhu</span>
+    <h3 class="font-heading font-bold text-xl text-gray-900 mt-1">21°C Alami</h3>
+    <p class="text-xs text-gray-600 mt-2 font-body">Kedalaman kolam: 0.5 - 2.5 meter. Dasar sungai berbatu alam tanpa lumpur pekat.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAYA TARIK WISATA (Editorial Grid) -->
+    <section id="daya-tarik" class="py-16 bg-putih">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="editorial-badge px-3 py-1 text-xs">PESONA UTAMA</span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl text-gray-900 mt-3">
+                    Mengapa Harus Mengunjungi Krawak?
+                </h2>
+                <div class="w-20 h-1 bg-cokelat mx-auto my-4 rounded"></div>
+                <p class="font-subheading text-gray-600 text-sm sm:text-base">
+                    Keindahan hulu sungai alami yang menawarkan ketenangan, keasrian hutan jati, dan kejernihan air yang tiada tanding.
+                </p>
+            </div>
+
+            <!-- Asymmetric Magazine Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Daya Tarik 1 -->
+                <div class="bg-sage/50 rounded-xl overflow-hidden border-2 border-cokelat shadow-sm flex flex-col group hover:-translate-y-1 transition-transform">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="images (5).jpg" 
+                             alt="Air Bening Bak Kaca" 
+                             onerror="this.src='https://placehold.co/800x600/0F766E/FFFFFF?text=Air+Bening+Bak+Kaca'"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-toska text-white text-xs font-subheading font-bold px-3 py-1 rounded shadow">
+                            01. Kejernihan Air
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900 mb-2 group-hover:text-toska transition-colors">
+                                Air Bening Bak Kaca
+                            </h3>
+                            <p class="text-gray-600 text-sm font-body leading-relaxed">
+                                Sumber mata air memancar langsung dari celah batuan kapur hulu pegunungan Tuban. Kejernihannya memungkinkan Anda melihat batu-batu sungai dan pergerakan air hingga ke dasar secara transparan.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-300/60 flex items-center text-xs font-subheading font-semibold text-cokelat">
+                            <i class="fa-solid fa-sparkles mr-2 text-amber-600"></i> Alami murni tanpa bahan kimia
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daya Tarik 2 -->
+                <div class="bg-sage/50 rounded-xl overflow-hidden border-2 border-cokelat shadow-sm flex flex-col group hover:-translate-y-1 transition-transform">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="images (6).jpg" 
+                             alt="Teduh Hutan Jati Perhutani" 
+                             onerror="this.src='https://placehold.co/800x600/78350F/FFFFFF?text=Hutan+Jati+Perhutani'"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-cokelat text-white text-xs font-subheading font-bold px-3 py-1 rounded shadow">
+                            02. Keasrian Alam
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900 mb-2 group-hover:text-toska transition-colors">
+                                Teduh Rimbun Hutan Jati
+                            </h3>
+                            <p class="text-gray-600 text-sm font-body leading-relaxed">
+                                Dikelilingi pohon jati menjulang tinggi milik Perhutani yang memberikan naungan alami. Terpaan angin sejuk dan pendaran cahaya matahari menerobos dedaunan menciptakan atmosfer magis.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-300/60 flex items-center text-xs font-subheading font-semibold text-cokelat">
+                            <i class="fa-solid fa-leaf mr-2 text-emerald-600"></i> Suasana asri & kaya oksigen
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daya Tarik 3 -->
+                <div class="bg-sage/50 rounded-xl overflow-hidden border-2 border-cokelat shadow-sm flex flex-col group hover:-translate-y-1 transition-transform md:col-span-2 lg:col-span-1">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="krawa.jpg" 
+                             alt="Grojokan & Formasi Bebatuan" 
+                             onerror="this.src='https://placehold.co/800x600/0F766E/FFFFFF?text=Formasi+Bebatuan'"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-toska text-white text-xs font-subheading font-bold px-3 py-1 rounded shadow">
+                            03. Lanskap Alami
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900 mb-2 group-hover:text-toska transition-colors">
+                                Grojokan & Undakan Batu
+                            </h3>
+                            <p class="text-gray-600 text-sm font-body leading-relaxed">
+                                Bebatuan alam membentuk cekungan kolam serta air terjun mini (grojokan) dengan aliran konsisten. Sangat cocok dijadikan tempat duduk santai menikmati efek terapi pijat air.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-300/60 flex items-center text-xs font-subheading font-semibold text-cokelat">
+                            <i class="fa-solid fa-water mr-2 text-blue-600"></i> Sensasi pijat air alami
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AKTIVITAS WISATA -->
+    <section id="aktivitas" class="py-16 bg-sage border-y-2 border-cokelat">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 editorial-border-b">
+            <div>
+                <span class="editorial-badge px-3 py-1 text-xs">PILIHAN AKTIVITAS</span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl text-gray-900 mt-2">
+                    Hal Seru yang Bisa Dilakukan
+                </h2>
+            </div>
+            <p class="font-subheading text-sm text-gray-600 mt-2 md:mt-0 max-w-md">
+                Ragam kegiatan outdoor menarik untuk mengisi waktu liburan bersama teman maupun keluarga.
+            </p>
+        </div>
+
+        <!-- Activity Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Activity 1 -->
+            <div class="bg-white p-6 rounded-xl border-2 border-cokelat shadow-sm hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-gray-900 mb-2">Berendam & Berenang</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-body">
+                        Rasakan segarnya air murni yang langsung mengembalikan kesegaran tubuh setelah penat beraktivitas.
+                    </p>
+                </div>
+                <span class="mt-4 text-[11px] font-subheading font-semibold text-toska flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check"></i> Kedalaman bervariasi
+                </span>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="bg-white p-6 rounded-xl border-2 border-cokelat shadow-sm hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-gray-900 mb-2">Fotografi Nature</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-body">
+                        Abadikan momen estetik berlatar pendaran sinar matahari di sela ranting jati dan beningnya air mata air.
+                    </p>
+                </div>
+                <span class="mt-4 text-[11px] font-subheading font-semibold text-toska flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check"></i> Spot instagramable
+                </span>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="bg-white p-6 rounded-xl border-2 border-cokelat shadow-sm hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-gray-900 mb-2">Piknik Tepi Sungai</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-body">
+                        Bersantai di saung atau bebatuan sambil menikmati gorengan hangat dan es degan segar buatan UMKM lokal.
+                    </p>
+                </div>
+                <span class="mt-4 text-[11px] font-subheading font-semibold text-toska flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check"></i> Area saung teduh
+                </span>
+            </div>
+
+            <!-- Activity 4 -->
+            <div class="bg-white p-6 rounded-xl border-2 border-cokelat shadow-sm hover:-translate-y-1 transition-transform flex flex-col justify-between">
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-gray-900 mb-2">Trekking Susur Sungai</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-body">
+                        Jelajahi alur jernih hingga ke hulu mata air tersembunyi di kedalaman hutan jati yang hening dan tenang.
+                    </p>
+                </div>
+                <span class="mt-4 text-[11px] font-subheading font-semibold text-toska flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check"></i> Rute aman & alami
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- KULINER & UMKM DESA -->
+    <section id="kuliner" class="py-16 bg-putih">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Intro Header -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="editorial-badge px-3 py-1 text-xs">SAJIAN UMKM WARUNG LOKAL</span>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl text-gray-900 leading-tight">
+                        Kuliner Hangat Pendamping Berendam
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base font-body leading-relaxed">
+                        Sensasi berendam di air dingin akan semakin lengkap dengan kehangatan sajian tradisional dari warung warga Desa Guwoterus di sekitar lokasi wisata.
+                    </p>
+
+                    <div class="bg-sage p-5 rounded-lg border-2 border-cokelat space-y-3">
+                        <div class="flex items-center gap-2 text-toska font-subheading font-bold text-sm">
+                            <i class="fa-solid fa-hand-holding-heart text-red-500"></i> Pemberdayaan Ekonomi Masyarakat
+                        </div>
+                        <p class="text-xs text-gray-700 font-body">
+                            Setiap jajanan dan minuman yang Anda beli mendukung langsung perekonomian warga lokal dan pelestarian area wisata Krawak.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Budget Calculator Trigger Button -->
+                    <button onclick="openKulinerCalculator()" class="bg-cokelat hover:bg-amber-900 text-white font-subheading font-semibold px-6 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center gap-3 text-sm cursor-pointer">
+                        <i class="fa-solid fa-calculator text-amber-300 text-lg"></i>
+                        <span>Hitung Estimasi Jajanan Wisata</span>
+                    </button>
+                </div>
+
+                <!-- Right Culinary Cards Grid -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <!-- Culinary 1: Mie Instan Kuah -->
+                    <div class="bg-white rounded-lg border-2 border-cokelat p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="h-40 rounded-lg overflow-hidden mb-4 bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80" 
+                                     alt="Mie Instan Kuah Telur Warm" 
+                                     onerror="this.src='https://placehold.co/600x400/78350F/FFFFFF?text=Mie+Kuah+Warm'"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-heading font-bold text-lg text-gray-900">Mie Kuah Telur Rawit</h3>
+                                <span class="bg-toska/10 text-toska font-mono text-xs font-bold px-2 py-1 rounded">Rp 10.000</span>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 font-body">
+                                Disajikan hangat dengan irisan cabai segar & telur. Pilihan utama pengusir dingin usai berenang.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-3 text-[11px] font-subheading font-medium text-cokelat">
+                            <i class="fa-solid fa-fire text-amber-500 mr-1"></i> Favorit Wisatawan
+                        </span>
+                    </div>
+
+                    <!-- Culinary 2: Gorengan Warm Crispy -->
+                    <div class="bg-white rounded-lg border-2 border-cokelat p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="h-40 rounded-lg overflow-hidden mb-4 bg-gray-100">
+                                <img src="gorengan dan kopi.jpg" 
+                                     alt="Gorengan Renyah Warm" 
+                                     onerror="this.src='https://placehold.co/600x400/78350F/FFFFFF?text=Gorengan+Warm'"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-heading font-bold text-lg text-gray-900">Gorengan Warm Crispy</h3>
+                                <span class="bg-toska/10 text-toska font-mono text-xs font-bold px-2 py-1 rounded">Rp 1.000 / pcs</span>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 font-body">
+                                Tempe mendoan hangat, bakwan renyah, dan tahu isi digoreng mendadak di tempat saat dipesan.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-3 text-[11px] font-subheading font-medium text-cokelat">
+                            <i class="fa-solid fa-thumbs-up text-amber-500 mr-1"></i> Renyah & Gurih
+                        </span>
+                    </div>
+
+                    <!-- Culinary 3: Es Degan Kelapa Muda -->
+                    <div class="bg-white rounded-lg border-2 border-cokelat p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="h-40 rounded-lg overflow-hidden mb-4 bg-gray-100">
+                               <img src="Kelapa.jpg" 
+     alt="Es Degan Kelapa Muda Segar" 
+     onerror="this.onerror=null; this.src='https://placehold.co/600x400/0F766E/FFFFFF?text=Es+Degan+Segar';" 
+     class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-heading font-bold text-lg text-gray-900">Es Degan Kelapa Muda</h3>
+                                <span class="bg-toska/10 text-toska font-mono text-xs font-bold px-2 py-1 rounded">Rp 8.000</span>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 font-body">
+                                Air kelapa muda murni segar dengan gula jawa cair khas Tuban yang alami melepaskan dahaga.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-3 text-[11px] font-subheading font-medium text-toska">
+                            <i class="fa-solid fa-snowflake text-blue-500 mr-1"></i> Penawar Dahaga Murni
+                        </span>
+                    </div>
+
+                    <!-- Culinary 4: Kopi Tuban -->
+                    <div class="bg-white rounded-lg border-2 border-cokelat p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="h-40 rounded-lg overflow-hidden mb-4 bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" 
+                                     alt="Kopi Cangkir Tuban" 
+                                     onerror="this.src='https://placehold.co/600x400/78350F/FFFFFF?text=Kopi+Tuban'"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-heading font-bold text-lg text-gray-900">Kopi Cangkir Tuban</h3>
+                                <span class="bg-toska/10 text-toska font-mono text-xs font-bold px-2 py-1 rounded">Rp 4.000</span>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 font-body">
+                                Kopi hitam lokal diseduh panas dengan racikan tradisional khas pesisir Tuban.
+                            </p>
+                        </div>
+                        <span class="inline-block mt-3 text-[11px] font-subheading font-medium text-cokelat">
+                            <i class="fa-solid fa-mug-hot text-amber-700 mr-1"></i> Seduhan Tradisional
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INFORMASI WISATA & AKSES LOKASI -->
+    <section id="lokasi" class="py-16 bg-sage border-y-2 border-cokelat">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 editorial-border-b">
+                <div>
+                    <span class="editorial-badge px-3 py-1 text-xs">PANDUAN LOKASI & RUTE</span>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl text-gray-900 mt-2">
+                        Akses Perjalanan & Etika Wisata
+                    </h2>
+                </div>
+                <p class="font-subheading text-xs sm:text-sm text-gray-600 mt-2 md:mt-0">
+                    Petunjuk arah dan norma kelestarian lingkungan Krawak
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Route Instructions (Col 1 to 7) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border-2 border-cokelat shadow-sm space-y-4">
+                        <h3 class="font-heading font-bold text-xl text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-route text-toska"></i> Rute Perjalanan Utama
+                        </h3>
+                        
+                        <div class="space-y-4 font-body text-xs sm:text-sm text-gray-700">
+                            <!-- Route 1 -->
+                            <div class="p-4 bg-sage/60 rounded-lg border border-cokelat/40">
+                                <div class="font-subheading font-bold text-gray-900 text-sm mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-city text-toska"></i> 1. Dari Pusat Kota Tuban (± 30 km - 45 Menit)
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Ambil rute selatan ke arah Merakurak - Montong - Singgahan. Setibanya di Desa Wisata Guwoterus, ikuti penunjuk jalan resmi Perhutani menuju kawasan Hutan Mata Air Krawak.
+                                </p>
+                            </div>
+
+                            <!-- Route 2 -->
+                            <div class="p-4 bg-sage/60 rounded-lg border border-cokelat/40">
+                                <div class="font-subheading font-bold text-gray-900 text-sm mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-map-location text-toska"></i> 2. Dari Kabupaten Bojonegoro (± 25 km - 35 Menit)
+                                </div>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Melewati jembatan Parengan menuju Singgahan. Jalur jalan aspal memadai dan mulus untuk semua kendaraan roda dua maupun roda empat.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Eco Conservation Guidelines -->
+                        <div class="pt-4 border-t border-gray-200">
+                            <h4 class="font-subheading font-bold text-xs text-cokelat mb-3 uppercase tracking-wider">
+                                Etika & Himbauan Kelestarian Alam:
+                            </h4>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-gray-700 font-body">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-emerald-600"></i> Wajib buang sampah pada tempatnya
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-emerald-600"></i> Hindari sabun berbahan kimia tinggi
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-emerald-600"></i> Jaga kerapihan dan keasrian pohon jati
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-emerald-600"></i> Awasi anak-anak saat berendam
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Direct Navigation Action Card -->
+                    <div class="bg-toska text-white p-6 rounded-xl border-2 border-cokelat shadow-md flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div>
+                            <h4 class="font-heading font-bold text-lg">Navigasi Langsung Google Maps</h4>
+                            <p class="text-xs text-emerald-100 font-body mt-1">
+                                Dapatkan rute tercepat dari titik lokasi Anda saat ini.
+                            </p>
+                        </div>
+                        <a href="https://maps.google.com/?cid=4993016948743117244" target="_blank" rel="noopener" class="bg-white hover:bg-gray-100 text-toska font-subheading font-bold px-5 py-3 rounded-lg text-sm whitespace-nowrap shadow transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Google Map Embed (Col 8 to 12) -->
+                <div class="lg:col-span-5 flex flex-col">
+                    <div class="bg-putih p-4 rounded-xl border-2 border-cokelat shadow-sm flex-1 flex flex-col">
+                        <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-200">
+                            <span class="font-subheading text-xs font-bold text-cokelat uppercase flex items-center gap-1.5">
+                                <i class="fa-solid fa-map"></i> Peta Presisi Wisata
+                            </span>
+                            <span class="text-[11px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded">
+                                Rating 4.3 ★ Google
+                            </span>
+                        </div>
+                        <!-- Embedded iFrame Map -->
+                        <div class="relative w-full h-80 sm:h-full rounded-lg overflow-hidden border border-gray-300">
+                            <iframe 
+                                title="Peta Lokasi Sumber Mata Air Krawak Tuban"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9701469502845!2d111.7821!3d-7.0315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77744da3a785a9%3A0x452ac275f3569945!2sSumber%20Mata%20Air%20Krawak%20Desa%20Wisata%20Guwoterus!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                                class="w-full h-full border-0" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALERI FOTO (Editorial Mosaic Grid) -->
+    <section id="galeri" class="py-16 bg-putih">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="editorial-badge px-3 py-1 text-xs">DOKUMENTASI VISUAL</span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl text-gray-900 mt-2">
+                    Galeri Pesona Krawak
+                </h2>
+                <div class="w-16 h-1 bg-cokelat mx-auto my-3 rounded"></div>
+                <p class="font-subheading text-xs sm:text-sm text-gray-600">
+                    Klik pada foto untuk memperbesar tampilan dan menikmati detail keasrian lokasi.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8 font-subheading text-xs">
+                <button onclick="filterGallery('all')" class="gallery-filter-btn active bg-toska text-white px-4 py-2 rounded-full font-semibold transition-colors">
+                    Semua Foto
+                </button>
+                <button onclick="filterGallery('air')" class="gallery-filter-btn bg-sage text-gray-800 hover:bg-toska hover:text-white px-4 py-2 rounded-full font-semibold transition-colors">
+                    Mata Air & Kolam
+                </button>
+                <button onclick="filterGallery('hutan')" class="gallery-filter-btn bg-sage text-gray-800 hover:bg-toska hover:text-white px-4 py-2 rounded-full font-semibold transition-colors">
+                    Hutan Jati
+                </button>
+                <button onclick="filterGallery('kuliner')" class="gallery-filter-btn bg-sage text-gray-800 hover:bg-toska hover:text-white px-4 py-2 rounded-full font-semibold transition-colors">
+                    Kuliner & UMKM
+                </button>
+            </div>
+
+            <!-- Editorial Gallery Mosaic Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryContainer">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item air relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/4/4b/Krawak_spring%2C_East_Java%2C_Indonesia.jpg', 'Aliran Mata Air Bening Krawak')">
+                    <img src="krawa.jpg" 
+                         alt="Aliran Mata Air Bening Krawak" 
+                         onerror="this.src='https://placehold.co/600x600/0F766E/FFFFFF?text=Mata+Air+Krawak'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item hutan relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80', 'Rimbun Hutan Jati Perhutani')">
+                    <img src="images (6).jpg" 
+                         alt="Hutan Jati Perhutani" 
+                         onerror="this.src='https://placehold.co/600x600/78350F/FFFFFF?text=Hutan+Jati'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item air relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80', 'Bebatuan Alami Dasar Sungai Transparan')">
+                    <img src="images (5).jpg" 
+                         alt="Bebatuan Dasar Sungai" 
+                         onerror="this.src='https://placehold.co/600x600/0F766E/FFFFFF?text=Bebatuan+Alami'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item kuliner relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=1200&q=80', 'Sajian Mie Instan Kuah Telur Warm')">
+                    <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80" 
+                         alt="Sajian Mie Kuah Warm" 
+                         onerror="this.src='https://placehold.co/600x600/78350F/FFFFFF?text=Mie+Kuah+Warm'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item air relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80', 'Undakan Alami Air Terjun Kecil Krawak')">
+                    <img src="krwa.jpg" 
+                         alt="Undakan Air Terjun Kecil" 
+                         onerror="this.src='https://placehold.co/600x600/0F766E/FFFFFF?text=Undakan+Air'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item kuliner relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=1200&q=80', 'Es Degan Kelapa Muda Murni Segar')">
+                    <img src="Kelapa.jpg" 
+                         alt="Kelapa Muda Degan" 
+                         onerror="this.src='https://placehold.co/600x600/0F766E/FFFFFF?text=Es+Degan'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item hutan relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&w=1200&q=80', 'Jalur Setapak Teduh Hutan Jati Perhutani')">
+                    <img src="htn.jpg" 
+                         alt="Jalur Setapak Hutan" 
+                         onerror="this.src='https://placehold.co/600x600/78350F/FFFFFF?text=Jalur+Trekking'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item kuliner relative group overflow-hidden rounded-lg magazine-frame cursor-pointer h-52 sm:h-64" onclick="openLightbox('https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1200&q=80', 'Gorengan Tempe Mendoan dan Tahu Isi Renyah')">
+                    <img src="gorengan dan kopi.jpg" 
+                         alt="Gorengan Kriuk" 
+                         onerror="this.src='https://placehold.co/600x600/78350F/FFFFFF?text=Gorengan+Warm'"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t-4 border-cokelat">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-800">
+                
+                <!-- Col 1: Branding -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-toska rounded-lg flex items-center justify-center text-white text-lg font-heading font-black">
+                            K
+                        </div>
+                        <span class="font-heading font-extrabold text-xl text-white">
+                            SUMBER MATA AIR KRAWAK
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-body max-w-sm leading-relaxed">
+                        Destinasi wisata hulu mata air alami yang tersembunyi di dalam kawasan rimbun hutan jati Desa Guwoterus, Kecamatan Singgahan, Kabupaten Tuban.
+                    </p>
+                    <p class="text-xs text-amber-300 font-subheading italic">
+                        "Rasakan Kesegaran Alami di Jantung Hutan Tuban"
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation -->
+            <div class="relative overflow-hidden rounded-2xl shadow-xl min-h-[380px] lg:min-h-[460px] flex flex-col justify-between p-6 bg-cover bg-center group"
+                 style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop');">
+                
+                <!-- Main Visual Image Element with IDN Times source & automatic fallback -->
+                <img src="krawok.jpg" 
+                     alt="Sumber Mata Air Krawak Tuban " 
+                     class="absolute inset-0 w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105 -z-10"
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1200&auto=format&fit=crop';" />
+
+                <!-- Badges Overlay -->
+                <div class="flex flex-wrap gap-2 z-10">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-800/80 backdrop-blur-md text-white border border-emerald-400/30 shadow-md">
+                        <i class="fas fa-water"></i> Air Bening Bak Kaca
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-stone-900/60 backdrop-blur-md text-stone-200 border border-stone-600/30 shadow-md">
+                        <i class="fas fa-tree"></i> Rimbun Hutan Jati
+                    </span>
+                </div>
+
+                <!-- Source Attribution Link -->
+                <div class="z-10 mt-auto pt-6 flex justify-between items-end">
+                    <a href="https://www.tiktok.com/@sandi199281/video/7634755474923064583?is_from_webapp=1&sender_device=pc" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 text-xs text-white/90 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/20 hover:bg-black/60 transition-colors">
+                        <i class="fas fa-newspaper text-emerald-400"></i>
+                        <span>Link Video Tiktok</span>
+                        <i class="fas fa-external-link-alt text-[10px] opacity-70"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: CULINARY BUDGET CALCULATOR MODAL -->
+    <div id="kulinerModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl border-2 border-cokelat max-w-md w-full p-6 shadow-2xl relative space-y-4">
+            <button onclick="closeKulinerCalculator()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl font-bold" aria-label="Tutup">
+                &times;
+            </button>
+            
+            <div class="border-b border-gray-200 pb-3">
+                <h3 class="font-heading font-bold text-xl text-gray-900 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-toska"></i> Simulasi Biaya Jajanan
+                </h3>
+                <p class="text-xs text-gray-600 mt-1 font-body">
+                    Hitung estimasi pengeluaran makan & minum saat bersantai di Krawak
+                </p>
+            </div>
+
+            <div class="space-y-3 font-subheading text-xs text-gray-800">
+                <!-- Item 1 -->
+                <div class="flex justify-between items-center bg-sage/50 p-3 rounded border border-cokelat/30">
+                    <div>
+                        <div class="font-bold">Mie Instan Kuah Telur</div>
+                        <div class="text-[11px] text-gray-500">Rp 10.000 / porsi</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty('mie', -1)" class="w-7 h-7 bg-white border border-gray-300 rounded font-bold text-gray-700 cursor-pointer hover:bg-gray-100">-</button>
+                        <span id="qty-mie" class="w-6 text-center font-bold">1</span>
+                        <button onclick="changeQty('mie', 1)" class="w-7 h-7 bg-white border border-gray-300 rounded font-bold text-gray-700 cursor-pointer hover:bg-gray-100">+</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex justify-between items-center bg-sage/50 p-3 rounded border border-cokelat/30">
+                    <div>
+                        <div class="font-bold">Gorengan Warm Crispy</div>
+                        <div class="text-[11px] text-gray-500">Rp 1.000 / pcs</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty('gorengan', -1)" class="w-7 h-7 bg-white border border-gray-300 rounded font-bold text-gray-700 cursor-pointer hover:bg-gray-100">-</button>
+                        <span id="qty-gorengan" class="w-6 text-center font-bold">5</span>
+                        <button onclick="changeQty('gorengan', 1)" class="w-7 h-7 bg-white border border-gray-300 rounded font-bold text-gray-700 cursor-pointer hover:bg-gray-100">+</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex justify-between items-center bg-sage/50 p-3 rounded border border-cokelat/30">
+                    <div>
+                        <div class="font-bold">Es Degan Kelapa Muda</div>
+                        <div class="text-[11px] text-gray-500">Rp 8.000 / gelas</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty('degan', -1)" class="w-7 h-7 bg-white border border-gray-300 rounded font-bold text-gray-700 cursor-pointer hover:bg-gray-100">-</button>
+                        <span id="qty-degan" class="w-6 text-center font-bold">1</span>
+                        <button onclick="changeQty('degan', 1)" class="w-7 h-7 bg-white border border-gray-300 rounded font-bold text-gray-700 cursor-pointer hover:bg-gray-100">+</button>
+                    </div>
+                </div>
+
+                <!-- Fixed Cost Item -->
+                <div class="flex justify-between items-center bg-sage/50 p-3 rounded border border-cokelat/30">
+                    <div>
+                        <div class="font-bold">Tiket Masuk + Parkir Motor</div>
+                        <div class="text-[11px] text-gray-500">Rp 7.000 (Tetap)</div>
+                    </div>
+                    <span class="text-xs font-bold text-toska">Termasuk</span>
+                </div>
+            </div>
+
+            <!-- Total Budget Display -->
+            <div class="bg-toska text-white p-4 rounded-lg flex justify-between items-center font-heading font-bold text-sm">
+                <span>Total Estimasi Wisata:</span>
+                <span id="totalBudgetDisplay" class="text-lg text-amber-300">Rp 30.000</span>
+            </div>
+
+            <p class="text-[11px] text-gray-500 text-center font-body">
+                *Estimasi pengeluaran standar untuk 1 orang berkunjung.
+            </p>
+        </div>
+    </div>
+
+    <!-- MODAL 2: PHOTO LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 bg-black/90 z-50 hidden flex flex-col items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-amber-300 transition-colors cursor-pointer" aria-label="Tutup foto">
+            &times;
+        </button>
+        <div class="max-w-4xl w-full max-h-[80vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Zoom Photo" class="max-h-[70vh] w-auto object-contain rounded-lg border-2 border-white shadow-2xl">
+            <p id="lightboxCaption" class="text-white font-subheading text-sm text-center mt-4 bg-black/60 px-4 py-2 rounded-full border border-gray-700">
+                Keterangan Foto
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const prices = {
+            mie: 10000,
+            gorengan: 1000,
+            degan: 8000,
+            fixed: 7000
+        };
+
+        const quantities = {
+            mie: 1,
+            gorengan: 5,
+            degan: 1
+        };
+
+        function changeQty(item, delta) {
+            quantities[item] = Math.max(0, quantities[item] + delta);
+            document.getElementById(`qty-${item}`).innerText = quantities[item];
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            const total = (quantities.mie * prices.mie) + 
+                          (quantities.gorengan * prices.gorengan) + 
+                          (quantities.degan * prices.degan) + 
+                          prices.fixed;
+            document.getElementById('totalBudgetDisplay').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function openKulinerCalculator() {
+            document.getElementById('kulinerModal').classList.remove('hidden');
+            calculateTotal();
+        }
+
+        function closeKulinerCalculator() {
+            document.getElementById('kulinerModal').classList.add('hidden');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')){
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        }
+
+        function openLightbox(src, caption) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxCaption').innerText = caption;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-toska', 'text-white');
+                btn.classList.add('bg-sage', 'text-gray-800');
+            });
+
+            event.currentTarget.classList.remove('bg-sage', 'text-gray-800');
+            event.currentTarget.classList.add('bg-toska', 'text-white');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        let audioCtx = null;
+        let isSoundPlaying = false;
+        let noiseNode = null;
+        let gainNode = null;
+
+        function toggleAmbianceSound() {
+            const btnText = document.getElementById('ambianceText');
+            const btnIcon = document.getElementById('ambianceIcon');
+
+            if (!isSoundPlaying) {
+                try {
+                    if (!audioCtx) {
+                        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    }
+
+                    // Create pink noise for realistic water stream sound
+                    const bufferSize = audioCtx.sampleRate * 2;
+                    const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                    const output = noiseBuffer.getChannelData(0);
+                    let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+
+                    for (let i = 0; i < bufferSize; i++) {
+                        let white = Math.random() * 2 - 1;
+                        b0 = 0.99886 * b0 + white * 0.0555179;
+                        b1 = 0.99332 * b1 + white * 0.0750759;
+                        b2 = 0.96900 * b2 + white * 0.1538520;
+                        b3 = 0.86650 * b3 + white * 0.3104856;
+                        b4 = 0.55000 * b4 + white * 0.5329522;
+                        b5 = -0.7616 * b5 - white * 0.0168980;
+                        output[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362;
+                        output[i] *= 0.04; 
+                        b6 = white * 0.115926;
+                    }
+
+                    noiseNode = audioCtx.createBufferSource();
+                    noiseNode.buffer = noiseBuffer;
+                    noiseNode.loop = true;
+
+                    // Filter to match soft river flow frequency
+                    const filter = audioCtx.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.value = 650;
+
+                    gainNode = audioCtx.createGain();
+                    gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+
+                    noiseNode.connect(filter);
+                    filter.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+
+                    noiseNode.start();
+                    isSoundPlaying = true;
+
+                    btnText.innerText = "Atmosfer Gemericik Air (ON)";
+                    btnIcon.className = "fa-solid fa-volume-high text-amber-300";
+                } catch(e) {
+                    console.log("Web Audio API notification: ", e);
+                }
+            } else {
+                if (gainNode) {
+                    gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
+                    setTimeout(() => {
+                        if (noiseNode) noiseNode.stop();
+                        isSoundPlaying = false;
+                        btnText.innerText = "Atmosfer Gemericik Air (OFF)";
+                        btnIcon.className = "fa-solid fa-volume-xmark";
+                    }, 500);
+                }
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
